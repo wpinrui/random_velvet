@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'package:url_launcher/url_launcher.dart';
 
 class RedVelvet {
   static Member irene = Member(
@@ -55,6 +56,15 @@ class RedVelvet {
     var remainingMembers = members.where((member) => member != first).toList();
     var second = remainingMembers[random.nextInt(remainingMembers.length)];
     return [first, second];
+  }
+
+  static void launchInstagramURL(Member member) async {
+    Uri uri = Uri.parse(member.link);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri);
+    } else {
+      throw 'Could not launch ${member.link}';
+    }
   }
 }
 
