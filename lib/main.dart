@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:random_velvet/data.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 void main() {
   runApp(const MyApp());
@@ -43,14 +44,14 @@ class _RvPageState extends State<RvPage> {
             child: Padding(
               padding: const EdgeInsets.fromLTRB(0, 12, 0, 12),
               child: AspectRatio(
-                aspectRatio: 1,
+                aspectRatio: 1 / 1.5,
                 child: TextButton(
                   onPressed: () {
                     setState(() {
                       currentPair = RedVelvet.changeFirstMember(currentPair);
                     });
                   },
-                  child: PhotoCard(imagePath: currentPair[0].imageString),
+                  child: PhotoCard(member: currentPair[0]),
                 ),
               ),
             ),
@@ -59,14 +60,14 @@ class _RvPageState extends State<RvPage> {
             child: Padding(
               padding: const EdgeInsets.fromLTRB(0, 12, 0, 12),
               child: AspectRatio(
-                aspectRatio: 1,
+                aspectRatio: 1 / 1.5,
                 child: TextButton(
                   onPressed: () {
                     setState(() {
                       currentPair = RedVelvet.changeSecondMember(currentPair);
                     });
                   },
-                  child: PhotoCard(imagePath: currentPair[1].imageString),
+                  child: PhotoCard(member: currentPair[1]),
                 ),
               ),
             ),
@@ -78,32 +79,49 @@ class _RvPageState extends State<RvPage> {
 }
 
 class PhotoCard extends StatelessWidget {
-  final String imagePath;
+  final Member member;
   const PhotoCard({
-    required this.imagePath,
+    required this.member,
     super.key,
   });
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-        shape: BoxShape.rectangle,
-        borderRadius: BorderRadius.all(Radius.circular(20)),
-        boxShadow: [
-          BoxShadow(
-            offset: Offset(0, 0),
-            spreadRadius: -8,
-            blurRadius: 30,
-            color: Color.fromRGBO(0, 0, 0, 1),
-          )
-        ],
-        image: DecorationImage(
-          fit: BoxFit.cover,
-          image: AssetImage(
-            'images/$imagePath',
+    return Card(
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.circular(20.0),
+      ),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          Expanded(
+            flex: 1,
+            child: ClipRRect(
+              borderRadius: BorderRadius.vertical(top: Radius.circular(20.0)),
+              child: Image.asset(
+                'images/${member.imageString}',
+                fit: BoxFit.cover,
+              ),
+            ),
           ),
-        ),
+          Center(
+            child: ListTile(
+              contentPadding: EdgeInsets.symmetric(vertical: 0, horizontal: 16),
+              horizontalTitleGap: 0,
+              leading: Icon(
+                FontAwesomeIcons.instagram,
+                color: Colors.pink,
+              ),
+              title: Text(
+                member.name,
+                style: TextStyle(
+                  fontSize: 18.0,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }

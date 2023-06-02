@@ -4,22 +4,27 @@ class RedVelvet {
   static Member irene = Member(
     imageString: 'irene.jpg',
     link: 'https://www.instagram.com/renebaebae/',
+    name: 'Irene',
   );
   static Member seulgi = Member(
     imageString: 'seulgi.jpg',
     link: 'https://www.instagram.com/hi_sseulgi/',
+    name: 'Seulgi',
   );
   static Member wendy = Member(
     imageString: 'wendy.jpg',
     link: 'https://www.instagram.com/todayis_wendy/',
+    name: 'Wendy',
   );
   static Member joy = Member(
     imageString: 'joy.jpg',
     link: 'https://www.instagram.com/_imyour_joy/',
+    name: 'Joy',
   );
   static Member yeri = Member(
     imageString: 'yeri.jpg',
     link: 'https://www.instagram.com/yerimiese/',
+    name: 'Yeri',
   );
   static List<Member> members = [
     RedVelvet.irene,
@@ -56,5 +61,6 @@ class RedVelvet {
 class Member {
   String imageString;
   String link;
-  Member({required this.imageString, required this.link});
+  String name;
+  Member({required this.imageString, required this.link, required this.name});
 }
