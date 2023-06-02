@@ -2,6 +2,9 @@
 
 Mobile app :iphone: for learning Flutter, and an excuse for Red Velvet to invade my GitHub. :heartpulse::yellow_heart::blue_heart::green_heart::purple_heart:
 
+## Features
+Not much, tap on a photo to see a different member, or tap on the name beneath the photo to go to their Instagram page.
+
 ## Mockup
 <img src=https://github.com/wpinrui/random_velvet/assets/77185900/452c5367-e4fe-4ec4-85af-f6adeda8ede2 width="400" height="400" alt="mockup">
 <p><a href="https://www.freepik.com/free-psd/premium-mobile-phone-screen-mockup-template_3891016.htm#query=iphone%20mockup&position=5&from_view=keyword&track=ais">Image by rawpixel.com</a> on Freepik</p>
