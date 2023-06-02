@@ -1,5 +1,3 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
-
 import 'package:flutter/material.dart';
 import 'package:random_velvet/data.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -21,13 +19,14 @@ class MyApp extends StatelessWidget {
           backgroundColor: Colors.red[900],
         ),
         backgroundColor: Colors.grey[900],
-        body: RvPage(),
+        body: const RvPage(),
       ),
     );
   }
 }
 
 class RvPage extends StatefulWidget {
+  const RvPage({super.key});
   @override
   State<RvPage> createState() => _RvPageState();
 }
@@ -39,7 +38,7 @@ class _RvPageState extends State<RvPage> {
     return Center(
       child: Row(
         children: [
-          SizedBox(height: 64),
+          const SizedBox(height: 64),
           Expanded(
             child: Padding(
               padding: const EdgeInsets.fromLTRB(0, 12, 0, 12),
@@ -97,7 +96,8 @@ class PhotoCard extends StatelessWidget {
           Expanded(
             flex: 1,
             child: ClipRRect(
-              borderRadius: BorderRadius.vertical(top: Radius.circular(20.0)),
+              borderRadius:
+                  const BorderRadius.vertical(top: Radius.circular(20.0)),
               child: Image.asset(
                 'images/${member.imageString}',
                 fit: BoxFit.cover,
@@ -111,19 +111,19 @@ class PhotoCard extends StatelessWidget {
               },
               child: Row(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     width: 8,
                   ),
-                  Icon(
+                  const Icon(
                     FontAwesomeIcons.instagram,
                     color: Colors.pink,
                   ),
-                  SizedBox(
+                  const SizedBox(
                     width: 8,
                   ),
                   Text(
                     member.name,
-                    style: TextStyle(
+                    style: const TextStyle(
                       fontSize: 18.0,
                       fontWeight: FontWeight.bold,
                       color: Colors.black,
