@@ -1,3 +1,5 @@
+import 'dart:math';
+
 class RedVelvet {
   static Member irene = Member(
     imageString: 'irene.jpg',
@@ -19,6 +21,20 @@ class RedVelvet {
     imageString: 'yeri.jpg',
     link: 'https://www.instagram.com/yerimiese/',
   );
+  static List<Member> members = [
+    RedVelvet.irene,
+    RedVelvet.joy,
+    RedVelvet.seulgi,
+    RedVelvet.joy,
+    RedVelvet.wendy
+  ];
+  static List<Member> generateRandomPair() {
+    var random = Random();
+    var first = members[random.nextInt(members.length)];
+    var remainingMembers = members.where((member) => member != first).toList();
+    var second = remainingMembers[random.nextInt(remainingMembers.length)];
+    return [first, second];
+  }
 }
 
 class Member {
