@@ -1,4 +1,5 @@
 import 'dart:math';
+import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class RedVelvet {
@@ -6,26 +7,31 @@ class RedVelvet {
     imageString: 'irene.jpg',
     link: 'https://www.instagram.com/renebaebae/',
     name: 'Irene',
+    color: Colors.pink,
   );
   static Member seulgi = Member(
     imageString: 'seulgi.jpg',
     link: 'https://www.instagram.com/hi_sseulgi/',
     name: 'Seulgi',
+    color: Colors.yellow.shade700,
   );
   static Member wendy = Member(
     imageString: 'wendy.jpg',
     link: 'https://www.instagram.com/todayis_wendy/',
     name: 'Wendy',
+    color: Colors.blue.shade900,
   );
   static Member joy = Member(
     imageString: 'joy.jpg',
     link: 'https://www.instagram.com/_imyour_joy/',
     name: 'Joy',
+    color: Colors.green.shade900,
   );
   static Member yeri = Member(
     imageString: 'yeri.jpg',
     link: 'https://www.instagram.com/yerimiese/',
     name: 'Yeri',
+    color: Colors.purple,
   );
   static List<Member> members = [
     RedVelvet.irene,
@@ -76,5 +82,10 @@ class Member {
   String imageString;
   String link;
   String name;
-  Member({required this.imageString, required this.link, required this.name});
+  Color color;
+  Member(
+      {required this.imageString,
+      required this.link,
+      required this.name,
+      required this.color});
 }
