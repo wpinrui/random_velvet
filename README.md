@@ -1,6 +1,10 @@
-# random_velvet
+<h1><img src=https://github.com/wpinrui/random_velvet/assets/77185900/ebcd8e1d-71f4-41ed-a1bf-109c42798d89  width="60" height="60" alt="app icon"> RandomVelvet</h1>
 
-Mobile app for learning Flutter, and an excuse for Red Velvet to invade my GitHub.
+Mobile app :iphone: for learning Flutter, and an excuse for Red Velvet to invade my GitHub. :heartpulse::yellow_heart::blue_heart::green_heart::purple_heart:
+
+## Mockup
+<img src=https://github.com/wpinrui/random_velvet/assets/77185900/452c5367-e4fe-4ec4-85af-f6adeda8ede2 width="400" height="400" alt="mockup">
+<p><a href="https://www.freepik.com/free-psd/premium-mobile-phone-screen-mockup-template_3891016.htm#query=iphone%20mockup&position=5&from_view=keyword&track=ais">Image by rawpixel.com</a> on Freepik</p>
 
 ## Photo Links
 I don't own the photos so I will link them here:
@@ -12,4 +16,4 @@ I don't own the photos so I will link them here:
 5. [Yeri](https://image-1.uhdpaper.com/wallpaper/red-velvet-yeri-feel-my-rhythm-phone-wallpaper-hd-uhdpaper.com-170@1@g.jpg)
 
 ## APK
-If you need more Red Velvet on your Android, then  I will put the link to the APK in the releases page.
+If you need more Red Velvet on your Android, you can download the APK from the releases page (probably need to fiddle with allowing APK from unknown sources and things like that). 
