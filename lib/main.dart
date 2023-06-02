@@ -3,7 +3,6 @@
 import 'package:flutter/material.dart';
 import 'package:random_velvet/data.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   runApp(const MyApp());
@@ -110,21 +109,27 @@ class PhotoCard extends StatelessWidget {
               onPressed: () {
                 RedVelvet.launchInstagramURL(member);
               },
-              child: ListTile(
-                contentPadding:
-                    EdgeInsets.symmetric(vertical: 0, horizontal: 16),
-                horizontalTitleGap: 0,
-                leading: Icon(
-                  FontAwesomeIcons.instagram,
-                  color: Colors.pink,
-                ),
-                title: Text(
-                  member.name,
-                  style: TextStyle(
-                    fontSize: 18.0,
-                    fontWeight: FontWeight.bold,
+              child: Row(
+                children: [
+                  SizedBox(
+                    width: 8,
                   ),
-                ),
+                  Icon(
+                    FontAwesomeIcons.instagram,
+                    color: Colors.pink,
+                  ),
+                  SizedBox(
+                    width: 8,
+                  ),
+                  Text(
+                    member.name,
+                    style: TextStyle(
+                      fontSize: 18.0,
+                      fontWeight: FontWeight.bold,
+                      color: Colors.black,
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
