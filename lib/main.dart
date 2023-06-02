@@ -114,9 +114,9 @@ class PhotoCard extends StatelessWidget {
                   const SizedBox(
                     width: 8,
                   ),
-                  const Icon(
+                  Icon(
                     FontAwesomeIcons.instagram,
-                    color: Colors.pink,
+                    color: member.color,
                   ),
                   const SizedBox(
                     width: 8,

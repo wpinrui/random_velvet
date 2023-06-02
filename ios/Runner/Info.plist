@@ -50,6 +50,7 @@
   <key>LSApplicationQueriesSchemes</key>
   <array>
     <string>https</string>
+    <string>instagram</string>
   </array>
 </dict>
 </plist>
