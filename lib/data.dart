@@ -35,6 +35,22 @@ class RedVelvet {
     var second = remainingMembers[random.nextInt(remainingMembers.length)];
     return [first, second];
   }
+
+  static List<Member> changeFirstMember(List<Member> current) {
+    var random = Random();
+    var second = current[1];
+    var remainingMembers = members.where((member) => member != second).toList();
+    var first = remainingMembers[random.nextInt(remainingMembers.length)];
+    return [first, second];
+  }
+
+  static List<Member> changeSecondMember(List<Member> current) {
+    var random = Random();
+    var first = current[1];
+    var remainingMembers = members.where((member) => member != first).toList();
+    var second = remainingMembers[random.nextInt(remainingMembers.length)];
+    return [first, second];
+  }
 }
 
 class Member {

@@ -26,10 +26,15 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class RvPage extends StatelessWidget {
-  var currentPair = RedVelvet.generateRandomPair();
+class RvPage extends StatefulWidget {
+  @override
+  State<RvPage> createState() => _RvPageState();
+}
+
+class _RvPageState extends State<RvPage> {
   @override
   Widget build(BuildContext context) {
+    var currentPair = RedVelvet.generateRandomPair();
     return Center(
       child: Row(
         children: [
