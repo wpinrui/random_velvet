@@ -32,9 +32,9 @@ class RvPage extends StatefulWidget {
 }
 
 class _RvPageState extends State<RvPage> {
+  var currentPair = RedVelvet.generateRandomPair();
   @override
   Widget build(BuildContext context) {
-    var currentPair = RedVelvet.generateRandomPair();
     return Center(
       child: Row(
         children: [
@@ -45,7 +45,11 @@ class _RvPageState extends State<RvPage> {
               child: AspectRatio(
                 aspectRatio: 1,
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      currentPair = RedVelvet.changeFirstMember(currentPair);
+                    });
+                  },
                   child: PhotoCard(imagePath: currentPair[0].imageString),
                 ),
               ),
@@ -57,7 +61,11 @@ class _RvPageState extends State<RvPage> {
               child: AspectRatio(
                 aspectRatio: 1,
                 child: TextButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                      currentPair = RedVelvet.changeSecondMember(currentPair);
+                    });
+                  },
                   child: PhotoCard(imagePath: currentPair[1].imageString),
                 ),
               ),
