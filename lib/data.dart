@@ -1,23 +1,23 @@
 class RedVelvet {
   static Member irene = Member(
     imageString: 'irene.jpg',
-    link: '',
+    link: 'https://www.instagram.com/renebaebae/',
   );
   static Member seulgi = Member(
     imageString: 'seulgi.jpg',
-    link: '',
+    link: 'https://www.instagram.com/hi_sseulgi/',
   );
   static Member wendy = Member(
     imageString: 'wendy.jpg',
-    link: '',
+    link: 'https://www.instagram.com/todayis_wendy/',
   );
   static Member joy = Member(
     imageString: 'joy.jpg',
-    link: '',
+    link: 'https://www.instagram.com/_imyour_joy/',
   );
   static Member yeri = Member(
     imageString: 'yeri.jpg',
-    link: '',
+    link: 'https://www.instagram.com/yerimiese/',
   );
 }
 
