@@ -46,7 +46,7 @@ class RedVelvet {
 
   static List<Member> changeSecondMember(List<Member> current) {
     var random = Random();
-    var first = current[1];
+    var first = current[0];
     var remainingMembers = members.where((member) => member != first).toList();
     var second = remainingMembers[random.nextInt(remainingMembers.length)];
     return [first, second];
