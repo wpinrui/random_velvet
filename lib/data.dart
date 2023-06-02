@@ -40,10 +40,10 @@ class RedVelvet {
   );
   static List<Member> members = [
     RedVelvet.irene,
-    RedVelvet.joy,
     RedVelvet.seulgi,
+    RedVelvet.wendy,
     RedVelvet.joy,
-    RedVelvet.wendy
+    RedVelvet.yeri,
   ];
   static List<Member> generateRandomPair() {
     var random = Random();
